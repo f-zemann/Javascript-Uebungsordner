@@ -6,7 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+     <h1>Studentenverzeichnis</h1>
+
+    <div style="margin-bottom: 10px;">
+        <label>Name </label>
+        <input id="name" type="string" placeholder="Muster Mustermann">
+   </div>
+   <div style="margin-bottom: 10px;">
+        <label>Matrikelnummer</label>
+        <input id="matrikelnummer" type="number" placeholder="0123">
+   </div>
+
+    <div style="margin-bottom: 10px;">
+        <label>Notendurchschnitt</label>
+        <input id="notenschnitt" type="number" placeholder="1.2">
+   </div>
+      <div style="margin-bottom: 10px;">
+        <button onclick="studentenAnlegen()">Anlegen</button>
+   </div>
+   <div>
+        <button onclick="notenDurchschnitt()">Überprüfen</button>
+   </div>
 </body>
 <script src="main.js"></script>
 </html>

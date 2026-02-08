@@ -10,18 +10,25 @@ aller Studenten summiert um einen Durchschnitt zu
 erhalten(Durchschnitt = Totale Summe/Anzahl)*/
 
 //Hinweis: Funktion aufrufen!
+var studentenVerzeichnis = []
 
+function studentenAnlegen(){
+    var VollerName = document.getElementById("name").value;
+    var MartikelNummer = document.getElementById("matrikelnummer").value;
+    var NotenSchnitt = parseFloat(document.getElementById("notenschnitt").value);
 
-var studentenVerzeichnis = [
-    {Name: 'Lisa Müller', Martikelnummer: '1234', NC: 1.0},
-    {Name: 'Dan Hopkins', Martikelnummer: '2345', NC: 3.8},
-    {Name: 'Hunsun Lee', Martikelnummer: '3456', NC: 1.4},
-    {Name: 'Ayse Koc', Martikelnummer: '4567', NC: 2.9},
-    {Name: 'Maria Lopez', Martikelnummer: '5678', NC: 3.1}
-]
+    var student = {
+        Name: VollerName,
+        Martikelnummer: MartikelNummer,
+        NC: NotenSchnitt
+    };
+studentenVerzeichnis.push(student)
+
+}
+
 
 function notenDurchschnitt(){
-var notenDurchschnittListe =[];
+    var notenDurchschnittListe =[];
 for (let index = 0; index < studentenVerzeichnis.length; index++) {
     console.log(studentenVerzeichnis[index]);
     notenDurchschnittListe.push(studentenVerzeichnis[index].NC);
@@ -35,7 +42,6 @@ for (let j = 0; j < notenDurchschnittListe.length; j++) {
     
 };
 var notenSchnitt = summe / notenDurchschnittListe.length;
-return notenSchnitt
 
+console.log("Notendurchschnitt gesamt: "+ notenSchnitt)
 }
-console.log("Notendurchschnitt gesamt: "+notenDurchschnitt())
